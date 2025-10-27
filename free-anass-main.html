@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email the CNDH</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      background: #f9f9f9;
+      color: #222;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .email-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 18px;
+      background-color: #C41E3A;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+    .email-button:hover {
+      background-color: #2A6F3D;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+    <h1>Email the National Human Rights Council (CNDH)</h1>
+  <p>
+    Click the button below to open your email client with a pre-filled message 
+    addressed to the Conseil National des Droits de l’Homme (CNDH).  
+    This message calls for an urgent investigation and the immediate release of Anass El Moustaid Billah, 
+    a young Moroccan detained after participating in peaceful demonstrations.  
+    Please review the message, add your name and location at the bottom, and send it to help support justice, transparency, and human rights in Morocco.
+  </p>
+
+
+  <a
+    id="emailCNDH"
+    class="email-button"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Email the CNDH
+  </a>
+
+  <script>
+    const cndhEmail = "cndh@cndh.org.ma";
+    const subject = "Urgent: Request for Investigation and Immediate Release of Anass El Moustaid Billah";
+
+    const body = `Dear Members of the National Human Rights Council (CNDH),%0A%0A
+I am writing to express my deepest concern regarding the arbitrary detention of young Moroccans, including Anass El Moustaid Billah (born in Fez in 2003), who have peacefully exercised their constitutional right to freedom of expression and assembly.%0A%0A
+Anass has endured unimaginable personal loss, having lost both of his parents due to systemic failures in the Moroccan healthcare system. Despite these hardships, he has remained a peaceful and engaged citizen, advocating responsibly for reforms that directly affect his generation. Yet, this commitment to nonviolent civic engagement led to his arrest in September 2025, following his participation in peaceful demonstrations calling for better healthcare and education.%0A%0A
+Verified journalistic footage and eyewitness accounts confirm that he neither engaged in illegal activity nor posed any threat to public order. Nevertheless, he was arbitrarily detained and transferred to Oukacha Prison in Casablanca, accused under Article 597 of the Moroccan Penal Code, which concerns “disturbance or obstruction of the public route.” Such charges are wholly inconsistent with his documented peaceful conduct and constitute a grave misapplication of the law.%0A%0A
+Moreover, I call for the immediate release of the highway surveillance camera recordings corresponding to the date and time of Anass’ alleged actions, as well as the disclosure of his phone’s geolocation data at the time of arrest. These pieces of evidence, which are already in the possession of the authorities, can independently verify his innocence and demonstrate that he did not obstruct any public route or engage in criminal behavior. Transparency in these matters is essential to uphold the rule of law and public trust.%0A%0A
+I emphasize that the arbitrary detention of peaceful demonstrators violates both Moroccan constitutional guarantees and Morocco’s international human rights obligations, including:%0A
+- Article 29 of the Moroccan Constitution, which guarantees freedom of expression and peaceful assembly.%0A
+- Articles 9 and 19 of the International Covenant on Civil and Political Rights (ICCPR), ratified by Morocco, which protect liberty, due process, and freedom of expression.%0A
+- Articles 23, 119, and 120 of the Moroccan Constitution, which enshrine the principles of legality, due process, and the presumption of innocence.%0A%0A
+The detention of Anass is not only an injustice against one individual; it represents a threat to freedom of speech and civic participation in our country. His case sets a dangerous precedent — that peaceful advocacy for social reform is being criminalized.%0A%0A
+In light of the above, I respectfully call upon the CNDH to:%0A
+1. Immediately and impartially investigate the circumstances of Anass’ detention and make the findings public.%0A
+2. Advocate for the unconditional release of Anass and all individuals detained solely for exercising their constitutional right to free expression and peaceful assembly.%0A
+3. Demand the publication of all relevant evidence, including the autoroute camera footage and geolocation data, to ensure full transparency and accountability.%0A
+4. Establish independent oversight mechanisms to prevent future arbitrary and unconstitutional detentions of peaceful demonstrators.%0A%0A
+I appeal to the CNDH’s mandate and moral authority to act decisively in defense of justice, legality, and the dignity of Moroccan citizens.%0A%0A
+Sincerely,%0A
+[Sign Your Full Name]%0A`;
+
+    const emailLink = `mailto:${cndhEmail}?subject=${encodeURIComponent(subject)}&body=${body}`;
+    document.getElementById("emailCNDH").href = emailLink;
+  </script>
+
+</body>
+</html>
